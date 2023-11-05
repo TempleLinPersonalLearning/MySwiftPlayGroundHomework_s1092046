@@ -291,4 +291,8 @@ struct LandingPageView: View {
 }
 
 ```
-![HW2 Recording](./HW2_Recording.gif)
+
+
+https://github.com/TempleLinPersonalLearning/MySwiftPlayGroundHomework_s1092046/assets/78478355/1fed4122-499a-4dd5-aa0e-1c27bd1ef3d9
+
+
