@@ -105,4 +105,4 @@
     }
 
 ```
-![HW1 Recording](./HW1_Recording.mov)
+![HW1 Recording](./HW1_Recording.gif)
