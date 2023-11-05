@@ -8,13 +8,28 @@
 
 ```swift
 
-    //
-    //  ContentView.swift
-    //  homework1_selfintro
-    //
-    //  Created by Temple Lin on2023/10/2.
-    //
     import SwiftUI
+
+    @main
+    struct MyApp: App {
+        @AppStorage("isDarkMode") private var isDarkMode = false
+        
+        var body: some Scene {
+            WindowGroup {
+                ContentView(toggleDarkMode: {
+                    isDarkMode = !isDarkMode
+                })
+                .preferredColorScheme(isDarkMode ? .dark : .light)
+            }
+        }
+    }
+
+    extension String {
+        subscript(offset: Int) -> Character {
+            self[index(startIndex, offsetBy: offset)]
+        }
+    }
+
     struct ContentView: View {
         
         @State private var beginningText = "";
@@ -24,6 +39,8 @@
         private let myName = "林天牧"
         private let selfIntroDetails = "元智大學資訊傳播學系科技組 S1092046"
         private let selfQuote = "蘋果不是一天造成的"
+        
+        var toggleDarkMode: () -> Void
         
         var body: some View {
             VStack(spacing: 30) {
@@ -35,6 +52,7 @@
                     }
                     withAnimation(.easeInOut(duration: 1.0)) {
                         showDetail.toggle()
+                        toggleDarkMode()
                     }
                 }) {
                     Image("SelfImage")
@@ -60,16 +78,15 @@
                     VStack(spacing: 20) {
                         Text(myName)
                             .font(.system(size: 36))
-                        Text(selfIntroDetails)
+                        HStack {
+                            Image(systemName: "cloud.sun")
+                            Text(selfIntroDetails)
+                            Image(systemName: "cloud.sun")
+                        }
                         Text(selfQuote)
                             .foregroundStyle(Color(.red))
                     }
                 )
-    //            return VStac(spacing: 20) {
-    //                Text(myName)
-    //                    .font(system(size: 36))
-    //                Tex(selfIntroDetails)
-    //            }
             } else {
                 return AnyView(
                     Text(beginningText)
@@ -77,10 +94,6 @@
                             typeWriter()
                         })
                 )
-    //            return Tex(beginningText)
-    //                .onAppea(perform: {
-    //                   typeWriter()
-    //                })
             }
         }
         
@@ -96,6 +109,7 @@
             }
         }
     }
+
 
 ```
 
