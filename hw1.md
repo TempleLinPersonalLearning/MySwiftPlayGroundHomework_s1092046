@@ -1,10 +1,4 @@
 <h1>HW 1</h1>
-<table>
-<tr>
-<td>
-    HELLO WORLD!
-</td>
-<td>
 
 ```swift
 
@@ -110,9 +104,5 @@
         }
     }
 
-
 ```
-
-</td>
-</tr>
-</table>
+![HW1 Recording](./HW1_Recording.mov)
