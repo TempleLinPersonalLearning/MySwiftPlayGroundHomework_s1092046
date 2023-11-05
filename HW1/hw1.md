@@ -105,4 +105,9 @@
     }
 
 ```
-![HW1 Recording](./HW1_Recording.gif)
+
+
+
+https://github.com/TempleLinPersonalLearning/MySwiftPlayGroundHomework_s1092046/assets/78478355/94b5f4d3-2497-4cd1-9afe-9d6b55e81150
+
+
